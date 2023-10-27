@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-black: #242424;
+    --bg-grey: #30302F;
+    --main-color: #EB5D00;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-black);
+}
