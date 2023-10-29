@@ -1,0 +1,7 @@
+user-agent: * 
+disallow: /impressum.html
+disallow: /datenschutz.html
+
+user-agent: Googlebot 
+disallow: /impressum.html
+disallow: /datenschutz.html
