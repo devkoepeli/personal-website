@@ -8,14 +8,14 @@
 
     <link rel="stylesheet" href="css/montserrat.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 <body>
     <header class="header" id="header">
         <div class="container">
-            <div class="header__container">
+            <div class="header__container" id="header-container">
                 <div class="header__title">
-                    <a class="header__title-link" href="#">D<span class="header__title-char">e</span>vrim</a>
+                    <a class="header__title-link" href="#">Devrim</a>
                 </div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
@@ -36,6 +36,28 @@
                         </li>
                     </ul>
                 </nav>
+                <div id="hamburger" class="header__hamburger-container">
+                    <span class="header__hamburger"></span>
+                </div>
+                <div class="header__menu" id="menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">Home</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#about">About Me</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -80,7 +102,7 @@
                         sequi veritatis neque tenetur debitis laudantium in, fugiat voluptates. Dolorum aperiam eius sit aut
                         fugiat voluptates. Dolorum aperiam eius sit aut</p>
                     <div class="about__btn-container">
-                        <a class="button" href="#">
+                        <a class="button" href="./downloads/CV Köpeli Devrim.pdf" target="_blank">
                             <svg class="about__download-icon" viewBox="0 0 16 16">
                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
@@ -186,7 +208,7 @@
                         </div>
                         <div class="portfolio__project-btn">
                             <a class="button button--portfolio" href="https://quizapp.devkoepeli.ch">Live Test</a>
-                            <a class="button button--portfolio button--git" href="#">GitHub</a>
+                            <a class="button button--portfolio button--git" href="https://github.com/devkoepeli/QuizApp">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -203,7 +225,7 @@
                         </div>
                         <div class="portfolio__project-btn">
                             <a class="button button--portfolio" href="https://tictactoe.devkoepeli.ch">Live Test</a>
-                            <a class="button button--portfolio button--git" href="#">GitHub</a>
+                            <a class="button button--portfolio button--git" href="https://github.com/devkoepeli/Tic-Tac-Toe">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +242,7 @@
                         </div>
                         <div class="portfolio__project-btn">
                             <a class="button button--portfolio" href="https://eatmore.devkoepeli.ch">Live Test</a>
-                            <a class="button button--portfolio button--git" href="#">GitHub</a>
+                            <a class="button button--portfolio button--git" href="https://github.com/devkoepeli/Essensbestellung-Shop">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -239,9 +261,9 @@
                         I'd love to introduce myself personally and convince you of my motivation.</p>
                 </div>
                 <div class="contact__form-container">
-                    <form class="contact__form" action="#" method="POST">
+                    <form class="contact__form" action="https://devkoepeli.ch/send_mail/send_mail.php" method="POST">
                         <div class="contact__form-text-wrapper">
-                            <input class="contact__form-input" placeholder="First Name" name="first-name" type="text" required>
+                            <input class="contact__form-input" placeholder="First Name" name="name" type="text" required>
                             <input class="contact__form-input" placeholder="Surname" name="surname" type="text" required>
                         </div>
                         <input class="contact__form-input" placeholder="E-Mail address" name="e-mail" type="email" required>
@@ -270,6 +292,8 @@
             </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
     
 </body>
 </html>

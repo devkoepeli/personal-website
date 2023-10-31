@@ -7,7 +7,7 @@
     --bg-grey: #30302F;
     --main-color: #EB5D00;
     --text-white: #fff;
-    --text-secondary: rgb(228, 228, 228);  
+    --text-secondary: rgb(228, 228, 228);
 }
 
 html {
@@ -120,12 +120,12 @@ a {
 .opening__img {
     width: 100%;
     display: block;
-    transform: scale(1.25) translateX(85px);
+    transform: scale(1.25) translateX(70px);
 }
 
 .opening__info {
     width: 40%;
-} 
+}
 
 .opening__name {
     font-size: 3rem;
@@ -170,6 +170,8 @@ a {
 }
 
 .about__img-wrapper {
+    display: flex;
+    align-items: center;
     flex: 1 1 50%;
     padding-right: 8rem;
 }
@@ -225,9 +227,9 @@ a {
     gap: 5rem;
     margin-top: 4rem;
     background-image: linear-gradient(90deg, transparent calc(50% - 1px),
-    rgba(235, 93, 0, 0.5) calc(50% - 1px),
-    rgba(235, 93, 0, 0.5) calc(50% + 1px),
-    transparent calc(50% + 1px));
+            rgba(235, 93, 0, 0.5) calc(50% - 1px),
+            rgba(235, 93, 0, 0.5) calc(50% + 1px),
+            transparent calc(50% + 1px));
 }
 
 .skills__container {
@@ -246,7 +248,7 @@ a {
 
 .skills__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -292,7 +294,7 @@ a {
 
 .portfolio__subtitle {
     text-align: center;
-    color:var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 1.1rem;
 }
 
@@ -413,6 +415,7 @@ a {
 
 .contact__description {
     margin: 0;
+    color: var(--text-secondary);
     padding-top: 1.5rem;
 }
 
@@ -502,7 +505,7 @@ a {
     font-size: 1rem;
 }
 
-.footer__text ~ .footer__text:hover {
+.footer__text~.footer__text:hover {
     color: var(--main-color);
 }
 
@@ -542,4 +545,260 @@ a {
 .data__container {
     padding-top: 8rem;
     padding-bottom: 4rem;
+}
+
+.header__hamburger-container {
+    height: 1.7em;
+    width: 1.7em;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.header__hamburger,
+.header__hamburger:before,
+.header__hamburger:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 2rem;
+    background: white;
+    transition: all .2s ease;
+}
+
+.header__hamburger {
+    top: 0.75em;
+}
+
+.header__hamburger:before {
+    top: -0.6rem;
+}
+
+.header__hamburger:after {
+    top: 0.6rem;
+}
+
+.hamburger-active .header__hamburger {
+    transform: rotate(-135deg)
+}
+
+.hamburger-active .header__hamburger:before,
+.hamburger-active .header__hamburger:after {
+    top: 0
+}
+
+.hamburger-active .header__hamburger:before {
+    transform: rotate(90deg)
+}
+
+.header__menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__menu-overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.header__menu-list {
+    padding: 0;
+}
+
+.header__menu-item {
+    list-style: none;
+}
+
+.header__menu-link {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.header__menu-link:hover {
+    color: var(--main-color);
+}
+
+@media(max-width: 575px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .about__img-wrapper {
+        display: none;
+    }
+
+    .skills__wrapper {
+        background-image: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills__container {
+        max-width: 100%;
+    }
+
+    .about__heading {
+        text-align: center;
+    }
+
+    .about__btn-container {
+        text-align: center;
+    }
+
+    .skills__items {
+        justify-content: center;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .contact__title {
+        text-align: center;
+    }
+
+    .contact__info {
+        padding-right: 0;
+    }
+
+    .contact__form-container {
+        padding-left: 0;
+    }
+
+    .footer__text {
+        font-size: 0.9rem;
+    }
+
+    .footer__text:first-child {
+        display: block;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 991px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .skills__wrapper {
+        background-image: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills__container {
+        max-width: 100%;
+    }
+
+    .contact__info {
+        padding-right: 3rem;
+    }
+
+    .contact__form-container {
+        padding-left: 3rem;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .contact__container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .contact__title {
+        text-align: center;
+    }
+
+    .contact__info {
+        padding-right: 0;
+    }
+
+    .contact__form-container {
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 699px) {
+    .opening__img-wrapper {
+        display: none;
+    }
+
+    .opening {
+        background-image:
+            linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+            url('../images/about-me.jpg');
+        background-size: cover;
+        background-position: 10% center;
+    }
+
+    .opening__info {
+        width: 100%;
+    }
+
+    .about__img-wrapper {
+        display: none;
+    }
+
+    .about__heading {
+        text-align: center;
+    }
+
+    .about__btn-container {
+        text-align: center;
+    }
+}
+
+@media(min-width: 700px) and (max-width: 991px) {
+    .opening__img {
+        transform: scale(1.5) translateX(30px)
+    }
+
+    .about__img-wrapper {
+        padding-right: 5rem;
+    }
+}
+
+@media(max-width: 1172px) {
+    .skills__item-center {
+        display: contents;
+    }
+}
+
+@media(min-width: 992px) {
+    .header__hamburger-container {
+        display: none;
+    }
+
+    .mobile-only {
+        display: none;
+    }
 }
